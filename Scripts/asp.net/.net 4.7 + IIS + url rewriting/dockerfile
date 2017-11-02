@@ -1,0 +1,48 @@
+FROM microsoft/dotnet-framework:4.7
+
+# Execute the commands to install IIS Features
+
+RUN powershell.exe Add-WindowsFeature -name Web-Server -IncludeManagementTools 
+RUN powershell.exe Add-WindowsFeature -Name Web-Common-Http -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -name Web-Health -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -name Web-Health -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -Name Web-Performance -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -name Web-Security -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -name Web-Mgmt-Tools -IncludeAllSubFeature 
+RUN powershell.exe Add-WindowsFeature -name Web-Scripting-Tools -IncludeAllSubFeature 
+#RUN powershell.exe Install-WindowsFeature -name Web-App-Dev -IncludeAllSubFeature
+
+RUN powershell.exe Add-WindowsFeature -name Web-Asp-Net45
+RUN powershell.exe Add-WindowsFeature -name Web-CGI
+RUN powershell.exe Add-WindowsFeature -name  Web-ISAPI-Ext
+RUN powershell.exe Add-WindowsFeature -name  Web-ISAPI-Filter
+RUN powershell.exe Add-WindowsFeature -name  Web-Includes
+RUN powershell.exe Add-WindowsFeature -name  Web-WebSockets
+ 
+RUN reg add HKLM\SOFTWARE\Microsoft\InetStp /v MajorVersion /t REG_DWORD /d 0x9 /f
+ 
+RUN powershell.exe New-ItemProperty -Path HKLM:\software\microsoft\WebManagement\Server -Name EnableRemoteManagement -Value 1 -Force
+
+RUN net user IIS N!hK@6]ts>@Y!e /add 
+RUN net localgroup administrators IIS /add	
+
+# Stop IIS Services
+#RUN net stop iisadmin 
+#RUN net stop w3svc 
+#RUN net stop wmsvc
+
+# Start IIS Services
+#RUN net start iisadmin 
+#RUN net start w3svc 
+#RUN net start wmsvc
+	
+RUN @powershell wget http://download.microsoft.com/download/6/7/D/67D80164-7DD0-48AF-86E3-DE7A182D6815/rewrite_amd64_en-US.msi -OutFile rewrite_amd64_en-US.msi
+RUN msiexec /i "rewrite_amd64_en-US.msi" /q /log foo.log
+
+RUN reg add HKLM\SOFTWARE\Microsoft\InetStp /v MajorVersion /t REG_DWORD /d 0xa /f
+	
+ADD ServiceMonitor.exe /
+
+EXPOSE 80
+
+ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]

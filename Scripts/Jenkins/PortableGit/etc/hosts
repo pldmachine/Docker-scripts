@@ -1,0 +1,141 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+127.0.0.1	dev.pearlfinders
+127.0.0.1	3-80.nopcommerce
+127.0.0.1	local.opsys
+127.0.0.1	asp.net.core
+127.0.0.1 	ehospice.headchannel.pl
+#127.0.0.1	www.ehospice.com
+#127.0.0.1	ehospice.com
+192.168.1.228 node
+94.130.19.53 registry.local
+
+127.0.0.2	mysite.local
+	www.memorablehotels.co.uk # Docker project temida
+	www.millschody.com # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	memorablehotel.co.uk # Docker project temida
+	memorablehotel.com # Docker project temida
+	memorablehotelsfrance.com # Docker project temida
+	memorablehotels.co.uk # Docker project temida
+	millschody.com # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	ephrem-art.com # Docker project temida
+	www.ephrem-art.com # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	memorablehotel.co.uk # Docker project temida
+	memorablehotel.com # Docker project temida
+	memorablehotelsfrance.com # Docker project temida
+	memorablehotels.co.uk # Docker project temida
+	www.memorablehotels.co.uk # Docker project temida
+	www.millschody.com # Docker project temida
+	millschody.com # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	www.millschody.com # Docker project temida
+	millschody.com # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	ephrem-art.com # Docker project temida
+	www.ephrem-art.com # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	memorablehotel.co.uk # Docker project temida
+	memorablehotel.com # Docker project temida
+	memorablehotelsfrance.com # Docker project temida
+	memorablehotels.co.uk # Docker project temida
+	www.memorablehotels.co.uk # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+	ephrem-art.com # Docker project temida
+	www.ephrem-art.com # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	ephrem-art.com # Docker project temida
+	www.ephrem-art.com # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	www.millschody.com # Docker project temida
+	millschody.com # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	ephrem-art.com # Docker project temida
+	www.ephrem-art.com # Docker project temida
+	memorablehotel.co.uk # Docker project temida
+	memorablehotel.com # Docker project temida
+	memorablehotelsfrance.com # Docker project temida
+	memorablehotels.co.uk # Docker project temida
+	www.memorablehotels.co.uk # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	www.goingforindependence.org # Docker project temida
+	goingforindependence.org # Docker project temida
+	memorablehotel.co.uk # Docker project temida
+	memorablehotel.com # Docker project temida
+	memorablehotelsfrance.com # Docker project temida
+	memorablehotels.co.uk # Docker project temida
+	www.memorablehotels.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+172.29.73.110	ephrem-art.com # Docker project temida
+172.29.73.110	www.ephrem-art.com # Docker project temida
+172.29.65.181	www.goingforindependence.org # Docker project temida
+172.29.65.181	goingforindependence.org # Docker project temida
+172.29.70.50	memorablehotel.co.uk # Docker project temida
+172.29.70.50	memorablehotel.com # Docker project temida
+172.29.70.50	memorablehotelsfrance.com # Docker project temida
+172.29.70.50	memorablehotels.co.uk # Docker project temida
+172.29.70.50	www.memorablehotels.co.uk # Docker project temida
+172.29.75.119	www.millschody.com # Docker project temida
+172.29.75.119	millschody.com # Docker project temida
+	mkcontracts.co.uk # Docker project temida
+	www.mkcontracts.co.uk # Docker project temida
+	pawndirect.co.uk # Docker project temida
+	www.pawndirect.co.uk # Docker project temida
+	secure.mayhewproperties.co.uk # Docker project temida
+172.29.68.212	mkcontracts.co.uk # Docker project temida
+172.29.68.212	www.mkcontracts.co.uk # Docker project temida
+172.29.77.108	pawndirect.co.uk # Docker project temida
+172.29.77.108	www.pawndirect.co.uk # Docker project temida
+172.29.65.68	secure.mayhewproperties.co.uk # Docker project temida

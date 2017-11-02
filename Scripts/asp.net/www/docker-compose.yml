@@ -1,0 +1,77 @@
+version: "3"
+services:
+    database.live:
+        image: registry.local:5000/temida/live/database:24.08.2017  
+        environment:
+            SA_PASSWORD: "LSkJvWwGwaU_u6#"
+            ACCEPT_EULA: "Y"    
+        volumes:
+            - c:/docker/database/:c:/backup/
+        networks:
+            default:
+                aliases:
+                - temida.database.live
+    webiste.ephrem-art.live:
+        image: registry.local:5000/temida/live/websites/ephrem-art:24.08.2017   
+        stdin_open: true
+        tty: true
+        command: net start w3svc 
+        depends_on:
+            - database.live
+        environment:
+            - domains=ephrem-art.com;www.ephrem-art.com
+        networks:
+            default:
+    website.goingforindependence.live:
+        image: registry.local:5000/temida/live/websites/goingforindependence:28.08.2017
+        command: ping google.com
+        depends_on:
+            - database.live
+        environment:
+            - domains=www.goingforindependence.org;goingforindependence.org
+        networks:
+            default:
+    website.memorablehotels.live:
+        image: registry.local:5000/temida/live/websites/memorablehotels:29.08.2017
+        depends_on:
+            - database.live
+        environment:
+            - domains=memorablehotel.co.uk;memorablehotel.com;memorablehotelsfrance.com;memorablehotels.co.uk;www.memorablehotels.co.uk
+        networks:
+            default:
+    website.millschody.live:
+        image: registry.local:5000/temida/live/websites/millschody:29.08.2017
+        depends_on:
+            - database.live
+        environment:
+            - domains=www.millschody.com;millschody.com
+        networks:
+            default:
+    website.mkcontracts.live:
+        image: registry.local:5000/temida/live/websites/mkcontracts:29.08.2017
+        depends_on:
+            - database.live
+        environment:
+            - domains=mkcontracts.co.uk;www.mkcontracts.co.uk
+        networks:
+            default:
+    website.pawndirect.live:
+        image: registry.local:5000/temida/live/websites/pawndirect:29.08.2017
+        depends_on:
+            - database.live
+        environment:
+            - domains=pawndirect.co.uk;www.pawndirect.co.uk
+        networks:
+            default:
+    website.securemayhewproperties.live:
+        image: registry.local:5000/temida/live/websites/securemayhewproperties:29.08.2017
+        depends_on:
+            - database.live
+        environment:
+            - domains=secure.mayhewproperties.co.uk
+        networks:
+            default:
+networks:
+    default:
+        external:
+            name: "nat"

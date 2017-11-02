@@ -1,0 +1,1 @@
+.\docker_add_container_domain_to_host.ps1 goingforindependence www.goingforindependence.org

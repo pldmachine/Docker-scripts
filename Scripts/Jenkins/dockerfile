@@ -1,0 +1,12 @@
+FROM java_jre:4.7
+SHELL ["powershell"]
+
+RUN mkdir jenkins
+ENV HOME /jenkins  
+ENV JENKINS_VERSION 2.60.3  
+RUN powershell -Command "wget -Uri https://updates.jenkins-ci.org/download/war/2.60.3/jenkins.war -UseBasicParsing -OutFile c:/jenkins/jenkins.war"
+
+EXPOSE 8080  
+EXPOSE 50000
+
+CMD java -jar C:\\jenkins\\jenkins.war  
